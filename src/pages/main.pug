@@ -1,0 +1,15 @@
+extends ../templates/template.pug
+block content
+  .container
+    section.section
+      .blocks__wrap
+        - for(var i=0; i<4; i++)
+          .block__item(data-toggle="modal" data-target="#popup") 
+            .block__content Блок !{i+1}
+          
+      .checkbox__wrap
+        label.label-checkbox
+          input(type='checkbox').input-checkbox
+          .checkbox-text Выбери меня!
+
+      button(type="submit").button-add Добавить блок
